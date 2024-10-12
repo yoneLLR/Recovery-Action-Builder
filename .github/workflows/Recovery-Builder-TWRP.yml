@@ -156,8 +156,8 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          android-recovery/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_TARGET }}Teamwin-Unofficial-X689B.img
-          android-recovery/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_TARGET }}Teamwin-Unofficial-X689B.zip
+          android-recovery/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_TARGET }}/TeamWin*.img
+          android-recovery/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_TARGET }}/TeamWin*.zip
         name: Unofficial TeamWin Recovery for ${{ github.event.inputs.DEVICE_NAME }} // ${{ env.BUILD_DATE }}
         tag_name: ${{ github.run_id }}
         body: |
