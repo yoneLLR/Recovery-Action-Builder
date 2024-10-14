@@ -6,7 +6,7 @@ on:
       MANIFEST_BRANCH:
         description: 'SHRP Minimal-Manifest Branch'
         required: true
-        default: 'v3_11.0'
+        default: 'shrp-12.1'
         type: choice
         options:
         - shrp-12.1
@@ -93,7 +93,7 @@ jobs:
         cd android-recovery
         git config --global user.name "${{ github.actor }}"
         git config --global user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
-        repo init --depth=1 -u https://github.com/yoneLLR/SHRP-Manifest.git -b ${{ inputs.MANIFEST_BRANCH }}
+        repo init --depth=1 -u https://github.com/SHRP-Reborn/manifest.git -b ${{ inputs.MANIFEST_BRANCH }}
 
     - name: Repo Sync
       run: |
